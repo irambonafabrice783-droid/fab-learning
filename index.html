@@ -13,69 +13,308 @@
 <body>
 
     <header>
-        <h1>Fab-Learning</h1>
-        <p>Small steps, stronger understanding.</p>
+        <div class="logo">
+            <h1>Fab-Learning</h1>
+            <p>Small steps, stronger understanding.</p>
+        </div>
+
+        <nav>
+            <button onclick="showSection('home')">Home</button>
+            <button onclick="showSection('subjects')">Subjects</button>
+            <button onclick="showSection('notes')">Notes</button>
+            <button onclick="showSection('exercises')">Exercises</button>
+            <button onclick="showSection('quizzes')">Quizzes</button>
+            <button onclick="showSection('exams')">Exams</button>
+            <button onclick="showSection('ai')">Ask AI</button>
+            <button onclick="showSection('report')">Report Card</button>
+        </nav>
     </header>
 
-    <main class="hero">
 
-        <h2>Welcome to Fab-Learning</h2>
+    <!-- HOME -->
+    <section id="home" class="page active">
 
-        <p>
-            Learn, practice, test yourself, and improve your understanding.
-        </p>
+        <div class="hero">
+            <h2>Welcome to Fab-Learning</h2>
+
+            <p>
+                Learn, practice, test yourself, and improve your understanding.
+            </p>
+
+            <button class="main-button" onclick="showSection('subjects')">
+                Start Learning
+            </button>
+        </div>
 
         <div class="features">
 
             <div class="feature">
                 <h3>📚 Every Subject</h3>
-                <p>Study subjects from Primary and Secondary level.</p>
-                <button>Explore Subjects</button>
+                <p>Study Primary and Secondary subjects.</p>
+                <button onclick="showSection('subjects')">Explore</button>
             </div>
 
             <div class="feature">
                 <h3>📖 Full Notes</h3>
-                <p>Read detailed notes, explanations, formulas and examples.</p>
-                <button>Open Notes</button>
+                <p>Learn with detailed explanations and examples.</p>
+                <button onclick="showSection('notes')">Open Notes</button>
             </div>
 
             <div class="feature">
                 <h3>✏️ Exercises</h3>
                 <p>Practice questions and improve your skills.</p>
-                <button>Practice</button>
+                <button onclick="showSection('exercises')">Practice</button>
             </div>
 
             <div class="feature">
                 <h3>🧠 Quizzes</h3>
-                <p>Answer questions and get your score automatically.</p>
-                <button>Take a Quiz</button>
+                <p>Answer questions and receive your score.</p>
+                <button onclick="showSection('quizzes')">Take Quiz</button>
             </div>
 
             <div class="feature">
                 <h3>⏱️ Exams</h3>
-                <p>Take timed exams with automatic submission.</p>
-                <button>Start Exam</button>
+                <p>Take timed tests with automatic submission.</p>
+                <button onclick="showSection('exams')">Start Exam</button>
             </div>
 
             <div class="feature">
                 <h3>🤖 Ask AI</h3>
-                <p>Get help understanding difficult questions and topics.</p>
-                <button>Ask AI</button>
+                <p>Get help understanding difficult topics.</p>
+                <button onclick="showSection('ai')">Ask AI</button>
             </div>
 
             <div class="feature">
                 <h3>📊 Report Card</h3>
-                <p>See your scores, progress and areas to improve.</p>
-                <button>View Report</button>
+                <p>Track your scores and learning progress.</p>
+                <button onclick="showSection('report')">View Report</button>
             </div>
 
         </div>
 
-    </main>
+    </section>
+
+
+    <!-- SUBJECTS -->
+    <section id="subjects" class="page">
+
+        <h2>📚 Every Subject</h2>
+
+        <p>Select your education level.</p>
+
+        <div class="level-container">
+
+            <div class="level-card">
+                <h3>Primary</h3>
+                <p>Learning materials for Primary students.</p>
+                <button onclick="showMessage('Primary subjects will be added here.')">
+                    View Primary
+                </button>
+            </div>
+
+            <div class="level-card">
+                <h3>Secondary</h3>
+                <p>Learning materials for Secondary students.</p>
+                <button onclick="showMessage('Secondary subjects will be added here.')">
+                    View Secondary
+                </button>
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showSection('home')">
+            ← Back Home
+        </button>
+
+    </section>
+
+
+    <!-- NOTES -->
+    <section id="notes" class="page">
+
+        <h2>📖 Full Notes</h2>
+
+        <div class="content-card">
+
+            <h3>Detailed Learning</h3>
+
+            <p>
+                Fab-Learning notes will contain introductions,
+                learning objectives, definitions, key concepts,
+                formulas, worked examples, diagrams,
+                real-life applications, common mistakes,
+                summaries, and practice questions.
+            </p>
+
+            <button onclick="showMessage('More complete notes will be added here.')">
+                Browse Notes
+            </button>
+
+        </div>
+
+        <button class="back-button" onclick="showSection('home')">
+            ← Back Home
+        </button>
+
+    </section>
+
+
+    <!-- EXERCISES -->
+    <section id="exercises" class="page">
+
+        <h2>✏️ Exercises</h2>
+
+        <div class="content-card">
+
+            <h3>Practice Questions</h3>
+
+            <p>
+                Practice questions will be available by subject,
+                topic, and difficulty.
+            </p>
+
+            <button onclick="showMessage('Exercise system coming next.')">
+                Start Practice
+            </button>
+
+        </div>
+
+        <button class="back-button" onclick="showSection('home')">
+            ← Back Home
+        </button>
+
+    </section>
+
+
+    <!-- QUIZZES -->
+    <section id="quizzes" class="page">
+
+        <h2>🧠 Quizzes</h2>
+
+        <div class="content-card">
+
+            <h3>Test Your Knowledge</h3>
+
+            <p>
+                Quizzes will contain multiple-choice questions,
+                automatic marking, scores, percentages, and answers.
+            </p>
+
+            <button onclick="showMessage('Quiz system coming next.')">
+                Start Quiz
+            </button>
+
+        </div>
+
+        <button class="back-button" onclick="showSection('home')">
+            ← Back Home
+        </button>
+
+    </section>
+
+
+    <!-- EXAMS -->
+    <section id="exams" class="page">
+
+        <h2>⏱️ Timed Exams</h2>
+
+        <div class="content-card">
+
+            <h3>Exam Mode</h3>
+
+            <p>
+                Exams will have a countdown timer and will
+                automatically submit when the time reaches zero.
+            </p>
+
+            <button onclick="showMessage('Timed exam system coming next.')">
+                Start Exam
+            </button>
+
+        </div>
+
+        <button class="back-button" onclick="showSection('home')">
+            ← Back Home
+        </button>
+
+    </section>
+
+
+    <!-- AI -->
+    <section id="ai" class="page">
+
+        <h2>🤖 Ask AI</h2>
+
+        <div class="ai-box">
+
+            <p>
+                Ask questions about your lessons and get help
+                understanding difficult topics.
+            </p>
+
+            <textarea id="aiQuestion"
+                placeholder="Type your question here..."></textarea>
+
+            <button onclick="askAI()">Ask AI</button>
+
+            <div id="aiAnswer">
+                AI answers will appear here.
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showSection('home')">
+            ← Back Home
+        </button>
+
+    </section>
+
+
+    <!-- REPORT -->
+    <section id="report" class="page">
+
+        <h2>📊 Report Card</h2>
+
+        <div class="report-card">
+
+            <h3>Student Progress</h3>
+
+            <div class="stat">
+                <span>Exercises</span>
+                <strong>0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Quizzes</span>
+                <strong>0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Exams</span>
+                <strong>0</strong>
+            </div>
+
+            <div class="stat">
+                <span>Overall Score</span>
+                <strong>0%</strong>
+            </div>
+
+        </div>
+
+        <button class="back-button" onclick="showSection('home')">
+            ← Back Home
+        </button>
+
+    </section>
+
 
     <footer>
         <p>© 2026 Fab-Learning</p>
+        <p>Small steps, stronger understanding.</p>
     </footer>
+
+
+    <script src="script.js"></script>
 
 </body>
 
